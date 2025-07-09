@@ -1,0 +1,393 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --primary-color: #FFF;
+    --secondary-color: #FE6A0F;
+    --background-color: #141414;
+    --background-color-secondary: #1F1F1F;
+    --background-color-tertiary: #2B2B2B;
+    --text-color: #FFF;
+    --text-color-secondary: #FE6A0F;
+    --text-color-tertiary: #5F5F5F;
+}
+
+body{
+    font-family: 'Inter';
+    font-size: 1rem; /* fonte padrão: 1rem = 18px */
+    background-color: var(--background-color);
+    color: var(--text-color);  
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.logo a{
+    font-family: 'Calistoga';
+    font-size: 35px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+.logo a span{
+    color: var(--text-color-secondary);
+}
+
+/* HEADER */
+header .container{
+    display: flex;
+    align-items: center;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    gap: 50px;
+}
+
+header nav{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+header nav .leftside{
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+header nav li {
+    margin: 0 30px;
+}
+
+header nav li a{
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+header nav li a:hover{
+    color: var(--text-color-secondary);
+}
+
+header nav .btn {
+    display: block;
+    color: var(--text-color);
+    padding: 15px 30px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav .btn:hover{
+    background-color: var(--text-color-secondary);
+
+}
+
+header .menu {
+    display: none;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+header .menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+header .menu-icon div {
+    width: 32px;
+    height: 6px;
+    background-color: var(--primary-color);
+}
+/* FIM HEADER */
+
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+}
+
+.hero .left-content,
+.hero .right-content {
+    flex: 1;
+}
+.hero .left-content {
+    padding-bottom:150px;
+}
+
+.hero .left-content h1 {
+    font-family: 'Calistoga';
+    letter-spacing: 1px;
+    line-height: 74px;
+    font-size: 65px;
+    margin-top: 50px;
+    color: var(--text-color);
+}
+
+.hero .left-content p {
+    font-size: 20px;
+    line-height: 26px;
+    margin: 40px 0;
+    color: var(--text-color-secondary);
+}
+
+.hero .left-content .btn {
+    display: inline-block;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    padding: 15px 80px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero .left-content .btn:hover{
+    opacity: 0.8;
+}
+
+.hero .right-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .right-content img {
+    width: auto;
+    height: 600px;
+}
+/* FIM HERO */
+
+/* SEARCH */
+.search {
+    padding: 80px 0;
+    background-color: var(--background-color-secondary);
+    margin-top: -100px;
+}
+
+.search .search-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.search .search-sides {
+    display: flex;
+    margin-top: 30px;
+    gap: 100px;
+}
+
+.search .search-left,
+.search .search-right {
+    flex: 1;
+}
+
+.search input,
+.search select {
+    width: 100%;
+    background-color: var(--background-color-tertiary);
+    color: var(--text-color);
+    font-size: 20px;
+    outline: none;
+    padding: 20px;
+    border: 0;
+    border-radius: 5px;
+
+}
+
+.search .search-left input {
+    border: none;
+    background-image: url('../images/searchIcon.png');
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    padding-left: 60px;
+    border-radius: 5px;
+    color: var(--text-color);
+}
+
+.search .search-right select {
+    border: none;
+    background-color: var(--background-color-tertiary);
+    border-right: 20px solid transparent;
+    border-radius: 5px;
+    color: var(--text-color);
+} 
+
+/* PRODUCTS */
+.products-grid {
+    margin: 40px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.products-grid .product-item {
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    position: relative;
+}
+
+.products-grid .product-item:hover {
+    opacity: 0.8;
+}
+
+.product-item .warning {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.product-item .photo {
+    text-align: center;
+    background-color: var(--background-color-tertiary);
+    padding-top: 30px;
+}
+
+.product-item .photo img {
+    max-width: 100%;
+}
+
+.product-item .info {
+    background-color: var(--background-color-secondary);
+    padding: 60px 30px 30px 30px;
+    margin-top: -50px;
+}
+
+.product-item .product-category {
+    color: var(--text-color-secondary);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.product-item .product-name {
+    color: var(--text-color);
+    font-size: 32px;
+    font-family: 'Calistoga';
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.product-item .product-price {
+    color: var(--secondary-color);
+    font-size: 32px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: var(--background-color-secondary);
+    color: var(--text-color);
+}
+
+footer .container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+}
+
+footer .copyright {
+    font-size: 20px;
+    color: var(--text-color-tertiary);
+}
+
+footer .copyright a {
+    color: var(--text-color-tertiary);
+    text-decoration: none;
+}
+
+footer .copyright a:hover {
+    text-decoration: underline;
+}
+
+
+/* RESPONSIVO */
+@media (max-width: 800px) {
+    header nav {
+        display: none;
+    }
+    header .menu {
+        display: flex;
+    }
+
+    /* HERO */
+    .hero .container {
+        flex-direction: column;
+    }
+    .hero .left-content {
+        text-align: center;
+        padding-bottom:40px;
+    }
+    .hero .left-content h1{
+        font-size: 35px;
+        line-height:50px;
+    }
+
+    .hero .right-content img {
+        width: auto;
+        height: 350px;
+    }
+    /* SEARCH */
+    .search{
+        padding-bottom: 30px;
+    }
+    .search .search-title {
+        text-align: center;
+    }
+    .search .search-sides {
+        flex-direction: column;
+        gap: 20px;
+    }
+    /* PRODUCTS */
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* FOOTER */
+    footer .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
+}
+@media (max-width: 600px) {
+    .products-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+}
